@@ -7,23 +7,23 @@
 * [入门](essentials/getting_started.md)
 * [路由](essentials/routing.md)
 * [请求处理](essentials/request_handling.md)
-* [信差](essentials/runner.md)
+* [执行器](essentials/runner.md)
 * [中间件](essentials/middlewares.md)
 * [扩展](essentials/extensions.md)
 
 
 ## 高级
 
-- [Error Handling](advanced/error_handling.md)
-- [Request-Eval-Response Loop](advanced/rerl.md)
-- [Custom Extensions](advanced/custom_extensions.md)
-- [Scaling Project](advanced/scaling_project.md)
-- [Unit Testing](advanced/unit_testing.md)
-- [Deploying for Production](advanced/deploying_for_production.md)
+- [错误处理](advanced/error_handling.md)
+- [请求-执行-响应循环](advanced/rerl.md)
+- [自定义扩展](advanced/custom_extensions.md)
+- [项目规模扩展](advanced/scaling_project.md)
+- [单元测试](advanced/unit_testing.md)
+- [部署生产](advanced/deploying_for_production.md)
 
 ## 元信息
 
-- [Comparison with Other Frameworks](meta/comparison_with_other_frameworks.md)
-- [Next Steps](meta/next_steps.md)
-- [Join the Midori Community](meta/join_the_midori_community.md)
+- [与其他框架比较](meta/comparison_with_other_frameworks.md)
+- [下一步](meta/next_steps.md)
+- [加入 Midori 社区](meta/join_the_midori_community.md)
 
