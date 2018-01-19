@@ -2,11 +2,11 @@
 
 ## 基础
 
-* [Introduction](README.md)
-* [Installation](essentials/installation.md)
-* [Getting Started](essentials/getting_started.md)
-* [Routing](essentials/routing.md)
-* [Request Handling](essentials/request_handling.md)
+* [介绍](README.md)
+* [安装](essentials/installation.md)
+* [入门](essentials/getting_started.md)
+* [路由](essentials/routing.md)
+* [请求处理](essentials/request_handling.md)
 * [Runner](essentials/runner.md)
 * [Middlewares](essentials/middlewares.md)
 * [Extensions](essentials/extensions.md)
