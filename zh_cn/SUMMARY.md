@@ -7,9 +7,9 @@
 * [入门](essentials/getting_started.md)
 * [路由](essentials/routing.md)
 * [请求处理](essentials/request_handling.md)
-* [Runner](essentials/runner.md)
-* [Middlewares](essentials/middlewares.md)
-* [Extensions](essentials/extensions.md)
+* [信差](essentials/runner.md)
+* [中间件](essentials/middlewares.md)
+* [扩展](essentials/extensions.md)
 
 
 ## 高级
