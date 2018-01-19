@@ -1,6 +1,6 @@
-# Summary
+# 目录
 
-## Essentials
+## 基础
 
 * [Introduction](README.md)
 * [Installation](essentials/installation.md)
@@ -12,7 +12,7 @@
 * [Extensions](essentials/extensions.md)
 
 
-## Advanced
+## 高级
 
 - [Error Handling](advanced/error_handling.md)
 - [Request-Eval-Response Loop](advanced/rerl.md)
@@ -21,7 +21,7 @@
 - [Unit Testing](advanced/unit_testing.md)
 - [Deploying for Production](advanced/deploying_for_production.md)
 
-## Meta
+## 元信息
 
 - [Comparison with Other Frameworks](meta/comparison_with_other_frameworks.md)
 - [Next Steps](meta/next_steps.md)
