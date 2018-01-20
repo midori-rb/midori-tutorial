@@ -1,18 +1,18 @@
-# Runner
+# 执行器
 
-## Introdution
+## 引言
 
-`Runner` is the container of midori server. You could create, start, stop midori instance by `Runner`.
+`Runner` 是 Midori 服务器的容器。 你可以通过`Runner`创建、启动、停止 midori 实例。
 
-`Runner` use `Midori::Configure` as its configuration by default.
+`Runner` 用 `Midori::Configure` 作为默认配置。
 
-## Examples
+## 范例
 
-Here're some examples for common usages
+这里有一些常用的例子
 
-### Port Binding
+### 端口绑定
 
-Start midori instance with port `4567` instead of the default `8080`.
+使用端口`4567`启动 midori 实例，而不是默认的`8080`。
 
 ```ruby
 require 'midori'
@@ -26,9 +26,9 @@ Midori::Configure.set :port, 4567
 Midori::Runner.new(API).start
 ```
 
-### Address Binding
+### 地址绑定
 
-Start midori instance listening to all IP addresses.
+启动 midori 实例监听所有 IP 地址。
 
 ```ruby
 require 'midori'
@@ -42,9 +42,9 @@ Midori::Configure.set :bind, '0.0.0.0'
 Midori::Runner.new(API).start
 ```
 
-### Stop Midori
+### 停止 Midori
 
-Stop midori instance when specified route been called.
+当指定的路由被调用时停止 midori 实例。
 
 ```ruby
 require 'midori'
