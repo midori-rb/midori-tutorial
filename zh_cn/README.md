@@ -1,11 +1,11 @@
-# Introduction
+# 简介
 
-## What is midori?
+## 什么是 midori?
 
-Midori (pronounced /miːdɒliː/) is a **Ruby web framework** for building APIs, web pages and realtime web services. Midori is designed to provide **non-blocking** I/O operations without **callback hells** on web development. The core library is focused on network I/Os, and gives a very easy DSL to pick up and converting existed projects on. On the other hand, midori also officially provides extension libraries that could deal with file, database, cache, network requests and other I/O operations without blocking.
+Midori （发音为 /miːdɒliː/） 是一款用于构建 API 和网页，提供 Web 实时服务的 **Ruby Web 框架** 。Midori 旨在提供**非阻塞** I/O 操作，而不会在 Web 开发中出现**回调地狱**。核心库专注于处理网络 I/O，并提供了一个非常简单的 DSL 来提取和转换已有的项目。另一方面，midori 也正式提供扩展库，可以处理文件、数据库、缓存、网络请求和其他 I/O 操作，而不会产生阻塞。
 
-If you want to know how midori compares to other libraries/frameworks, checkout out the [Comparison with Other Frameworks](meta/comparison_with_other_frameworks.md)
+如果你想知道 midori 与其他库、框架相比的表现，请查看 [与其他框架的比较](meta/comparison_with_other_frameworks.md)。
 
-## Note
+## 注意
 
-The official guide assumes intermediate level knowledge of Ruby and backend development. If you are totally new , it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back! Prior experience with other frameworks like Rails helps, but is not required.
+官方指南假定开发者拥有 Ruby 和后端开发的中级知识。如果你是个完全的新手，立刻来学习框架不是你最好的选择。在此之前，请先学习语言的基础再来学习框架。在学习 Midori 前学习其他的框架（如 Rails）是有帮助的，但不是必需的。
