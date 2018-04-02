@@ -52,8 +52,10 @@ $runner = nil
 class API < Midori::API
   get '/stop' do
     $runner.stop
+    nil
   end
 end
 
-$runner = Midori::Runner.new(API).start
+$runner = Midori::Runner.new(API)
+$runner.start
 ```
