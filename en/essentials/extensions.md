@@ -1,13 +1,12 @@
-# Extensions
+# 扩展
 
-Extensions are rubygems that could combine other gems with midori through meta-programming.
-There's a set of officially supported midori extensions called `midori-contrib`.
-This contains gems commonly used like Database ORM, Redis Driver, Redis ORM, HTTP Driver, etc.
+扩展是一类 rubygems，可以通过元编程将其他 gems 与 Midori 整合。
 
-To include it inside your project, be sure to get the original gem installed without require it.
-Then include specific parts of `midori-contrib` to make it work.
+官方提供了一套名为 `midori-contrib` 的 Midori 扩展，其中包含了常用的 gems， 如  Database ORM、 Redis Driver、Redis ORM、HTTP Driver 等。
 
-For example:
+向你的项目中加入扩展时,请先确保已安装了原版的 gem 且它没有被调用。然后引入 `midori-contrib` 的特征部分使其生效。
+
+示例：
 
 `Gemfile`
 
