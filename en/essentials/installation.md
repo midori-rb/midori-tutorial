@@ -20,7 +20,7 @@ Generally, midori supports the following ruby interpreters:
   - 2.3.5
   - 2.4.2
 
-**Note: **
+**Note:**
 
 - **For JRuby users, due to some C extensions used in midori, it is still unable to run on the current version of JRuby.**
 - **For macOS users, you may meet performance problem due to the issue of [nio4r](https://github.com/socketry/nio4r/issues/125). Very few people would use macOS in production, so this issue may not affect much. We would still be working hard on fixing it, but the issue wouldn't be a high priority one.**
