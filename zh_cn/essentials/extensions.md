@@ -4,7 +4,7 @@
 
 官方提供了一套名为 `midori-contrib` 的 midori 扩展，其中包含了常用的 gems， 如  Database ORM、 Redis Driver、Redis ORM、HTTP Driver 等。
 
-向你的项目中加入扩展时,请先确保已安装了原版的 gem 且它没有被调用。然后引入 `midori-contrib` 的特征部分使其生效。
+向你的项目中加入扩展时，请先确保已安装了原版的 gem 且它没有被调用。然后引入 `midori-contrib` 的特征部分使其生效。
 
 示例：
 

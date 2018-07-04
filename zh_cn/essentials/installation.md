@@ -1,33 +1,39 @@
-# Installation
+# 安装
 
-## Requirements
+## 环境需求
 
-Open up a command line prompt. Any commands prefaced with a dollar sign `$` should be run in the command line. Verify that you have a current version of Ruby installed:
+打开命令行提示符，所有以 `$` 符号开头的命令都应该在命令行中运行。
+
+
+确认你安装了当前版本的 Ruby：
+
 
 ```
  $ ruby -v
  ruby 2.4.1p111
 ```
 
-Generally, midori supports the following ruby interpreters:
+通常 midori 支持下列 ruby 解释器：
 
 - Ruby (MRI) **>= 2.2.6**
 
- For every version released, it would be tested and **officially ensured** in the following environments:
+每一个发行的版本都会在下列环境中进行测试：
 
 - Ruby (MRI)
   - 2.2.8
   - 2.3.5
   - 2.4.2
 
-**Note: **
+**官方保证其能正确运行**
 
-- **For JRuby users, due to some C extensions used in midori, it is still unable to run on the current version of JRuby.**
-- **For macOS users, you may meet performance problem due to the issue of [nio4r](https://github.com/socketry/nio4r/issues/125). Very few people would use macOS in production, so this issue may not affect much. We would still be working hard on fixing it, but the issue wouldn't be a high priority one.**
+**注意：**
 
-It's hard to say that if it is possible for running on other ruby implementations like Rubinius or RubyMotion, if you're in favor of supporting more ruby implementations, you could open a ticket [here](https://github.com/midori-rb/midori.rb/issues), and we are glad to discuss it.
+- **对于 JRuby 用户，由于 midori 使用了一些 C 扩展，在当前版本的 JRuby 上还无法运行。**
+- **对于 macOS 用户，你也许会遇到一些由于 [nio4r](https://github.com/socketry/nio4r/issues/125) 导致的性能问题。 由于在 macOS 上使用产品的用户较少，所以这个问题应该影响范围较小。 我们仍会继续努力修复它， 但不会将其放在首要位置。**
 
-## Install with RubyGems
+我们不确定是否能在其他 ruby 实现，如 Rubinius 或 RubyMotion 上，安装并使用 midori 。如果你对支持更多 ruby 实现有兴趣，可以在[这里](https://github.com/midori-rb/midori.rb/issues)创建 ticket， 我们愿意就此进行讨论。
+
+## 通过 RubyGems 安装
 
 ```
 $ gem install em-midori
@@ -35,21 +41,21 @@ Successfully installed em-midori-0.4.3
 1 gem installed
 ```
 
-To test whether it has installed properly, run:
+测试是否成功安装，运行以下命令:
 
 ```
 $ ruby -r "midori" -e "class A < Midori::API;end;Midori::Runner.new(A).start"
 ```
 
-If you see the following message, then everything now works fine.
+如果你看到以下信息，表示一切正常运行。
 
 ```
 Midori 0.4.3 is now running on 127.0.0.1:8080
 ```
 
-## Use Bundler
+## 使用 Bundler
 
-Example `Gemfile` of basic usage as following:
+示例 `Gemfile` 的基本用法如下:
 
 ```ruby
 source 'https://rubygems.org'
@@ -57,22 +63,21 @@ gem 'bundler', '~> 1.0'
 gem 'em-midori', '~> 0.4', require: 'midori'
 ```
 
-and then running:
+之后运行:
 
 ```
 $ bundle install
 ```
 
-You could use
+你可以在 ruby 入口文件中使用：
 
 ```ruby
 require 'bundler'
 Bundler.require
 ```
 
-in your entrance ruby file.
 
-To include built-in extensions of midori you could make your `Gemfile` like:
+如要使用 midori 内建的扩展，你可以这样写 `Gemfile`:
 
 ```ruby
 source 'https://rubygems.org'
@@ -81,13 +86,15 @@ gem 'em-midori', '~> 0.4', require: 'midori'
 gem 'midori-contrib', '~> 0.0.1', require: %w'midori-contrib/file midori-contrib/sequel/mysql2'
 ```
 
-Using bunlder could make dependency management much easier, which helps a lot in scaling project. To learn more about bundler, you could see docs [here](http://bundler.io/docs.html). 
+使用 Bunlder 可以使依赖管理更容易， 提高了项目的可扩展性。想了解更多关于 Bunlder 的内容， 你可以查看[这里](http://bundler.io/docs.html)的文档。 
 
-## For Developers in China
+## 对于中国开发者
 
-You may probably meet problems with rubygems due to unstable overseas internet connection issues in China. The most popular way to solve it is to use mirror provided by [RubyChina](https://gems.ruby-china.org/) or [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) as your gem source. This may have some side effects in development, because there's a few minutes' delay in receiving gem updates.
+由于中国大陆对外网络访问不稳定，你可能会遇到 rubygems 的相关问题。
 
-Alternatively, you could use proxy to connect to the main repository directly to avoid the delay problem. But using proxy is a little too complex in production environment.
+最常用的解决方法是使用 [RubyChina](https://gems.ruby-china.org/) 或 [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) 提供的镜像作为你的 gem 源。这样可能会对开发产生一些影响，因为在获取 gem 更新时会有数分钟的延迟。
 
-Choose the solution better fits your requirements. Mixing the solutions like using proxy in development and using mirror in production is also a good choice.
+另一种方式是通过代理服务器直接连接主仓库来避免延迟问题。 但在产品中使用代理服务器还是有一点过于复杂。
+
+根据需求选择合适的方法解决你的问题。将不同方法结合起来，如在生产环境中使用代理服务器，在产品中使用镜像源也是一种好方法。
 
