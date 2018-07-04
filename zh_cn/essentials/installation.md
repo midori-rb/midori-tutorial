@@ -4,7 +4,6 @@
 
 打开命令行提示符，所有以 `$` 符号开头的命令都应该在命令行中运行。
 
-
 确认你安装了当前版本的 Ruby：
 
 
@@ -75,7 +74,6 @@ $ bundle install
 require 'bundler'
 Bundler.require
 ```
-
 
 如要使用 midori 内建的扩展，你可以这样写 `Gemfile`:
 
