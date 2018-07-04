@@ -1,8 +1,8 @@
-# Getting Started
+# 入门
 
 ## Hello Midori
 
-midori is a [DSL](https://en.wikipedia.org/wiki/Domain-specific_language) for web and API development in Ruby  with minimal effort:
+Midori 是为用户能够轻松地进行基于 Ruby 的 web 与 API 开发而生的 [DSL](https://zh.wikipedia.org/wiki/%E9%A2%86%E5%9F%9F%E7%89%B9%E5%AE%9A%E8%AF%AD%E8%A8%80) ：
 
 ```ruby
 # hello_midori.rb
@@ -17,11 +17,11 @@ end
 Midori::Runner.new(HelloWorldAPI).start
 ```
 
-Run with
+输入以下命令来运行
 
 ```
 $ ruby hello_midori.rb
 ```
 
-View at: http://127.0.0.1:8080 with your browser, if you see a page showing: **Ohayou Midori**. You've made your first application with midori.
+在你的浏览器上访问 http://127.0.0.1:8080 , 如果看到显示 **Ohayou Midori** 的页面，表示你已成功用 Midori 完成了第一个应用。
 
