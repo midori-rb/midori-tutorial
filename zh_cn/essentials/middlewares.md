@@ -1,12 +1,10 @@
-# Middlewares
+# 中间件
 
-Middlewares are very exciting features midori support.
-As it has been implemented for lots of web frameworks.
-Middlewares from midori behaves very different from other frameworks, which greatly helps reducing complexity and improving performance in scaling projects.
+中间件是 midori 所支持的一项令人激动的功能。许多 web 框架都已实现了这项功能。midori 的中间件与其他框架的表现有所不同, 极大地降低了项目复杂度并提高了可扩展性。
 
-## Basic Usage
+## 基本用法
 
-To begin with, inheritate the `Midori::Middleware` class. Here's an example:
+开始先继承一个 `Midori::Middleware` 类，示例如下:
 
 ```ruby
 class JSONMiddleware < Midori::Middleware
@@ -23,11 +21,11 @@ class JSONMiddleware < Midori::Middleware
 end
 ```
 
-To use middleware inside router, there're two possible ways.
-One is through `use` method, which would affect all routes in the current scope.
-The other is through `filter` method, which would affect the following route definition only.
+有两种方法在路由中使用中间件。
+一种是通过 `use` 方法, 这会影响当前作用域的所有路由。
+另一种是通过 `filter` 方法, 这只会对后面声明的路由生效。
 
-Here are some examples.
+示例如下：
 
 ```ruby
 class API < Midori::API
@@ -46,21 +44,21 @@ class API < Midori::API
 end
 ```
 
-## Stack-less Design
+## 非栈式设计
 
-For rack users, middlewares are always considered as parts of stack.
-Deep stacks may cause several performance issues in Ruby, including increasing cost when context switching, thread switching and process forking, etc.
-For frameworks like Rails, it defaulty contains lots of middlewares which enlarge this problem.
+对于 rack 用户，中间件被认为是栈的一部分。
+在 Ruby 中栈过深会导致许多性能问题，包括增加上下文切换、线程切换、进程分叉以及其他一些情况时的消耗。
+对于 Rails 这类的框架，其默认包含的许多中间件都会使这个问题变得更加严重。
 
-In midori, middlewares are no longer stack-based.
-It uses a loop-based system to run middleware code.
-This makes using of middlewares with less side effects.
+在 midori 中， 中间件不再基于栈。
+它使用了基于循环的系统来运行中间件代码。
+这减少了中间件使用造成的弊端。
 
-## Early Exit Feature
+## 提前退出功能
 
-Early exit feature is also supported in midori without stack.
-To make it happen, just respond an `Midori::Response` object during request processing.
-Here's an example for CORS middleware using early exit feature.
+midori 非栈式地支持了提前退出功能。
+如果要触发它，仅需在请求处理期间响应一个 `Midori::Response` 对象。
+这里提供了一个在 CORS 中间件中使用提前退出功能的示例。
 
 ```ruby
 class CorsMiddleware < Midori::Middleware
