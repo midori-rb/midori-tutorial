@@ -2,9 +2,9 @@
 
 ## 基本用法
 
-定义一个类继承  `Midori::API`  类即可完成路由的定义。Midori 不支持像 Sinatra 那样全局定义路由以避免作用域污染，这大大提高了复杂项目的可维护性。
+应在继承自 `Midori::API` 的类中定义路由。  midori 不支持像 sinatra 那样定义全局路由，由此避免作用域污染，否则将会对有一定规模的项目产生不可忽视的负面影响。
 
-在 midori 中，路由包含一个 HTTP 方法和 URL 的模式匹配。每个路由都关联一个 block：
+In midori, a route is an HTTP method with a URL-matching pattern. Each route is associated with a block:
 
 ```ruby
 class ExampleAPI < Midori::API
@@ -38,13 +38,13 @@ class ExampleAPI < Midori::API
 end
 ```
 
-路由按其定义的顺序进行匹配。第一个匹配上请求的路由将被调用。
+Routes are matched in the order they are defined. The first route that matches the request is invoked.
 
-Midori 不仅支持上述方法，它还支持 RFC 标准中提供的几乎所有方法。你可以在 [API 文档](http://www.rubydoc.info/gems/em-midori/Midori/API) 中查看更多细节。
+Midori not only supports the methods above, it supports almost every method provided in RFC standards. You could look it up in [API doc](http://www.rubydoc.info/gems/em-midori/Midori/API) for more details.
 
 ## Params
 
-路由模式可以包含命名参数，通过访问  `request.params`  获得：
+Routes patterns may include named parameters, accessible via the `request.params` hash:
 
 ```ruby
 class ExampleAPI < Midori::API
@@ -54,7 +54,7 @@ class ExampleAPI < Midori::API
 end
 ```
 
-路由模式可以包含通配符，通过访问  `request.params['splat']`  获得：
+Route patterns may also include splat (or wildcard) parameters, accessible via the `request.params['splat']` array:
 
 ```ruby
 class ExampleAPI < Midori::API
@@ -70,7 +70,7 @@ class ExampleAPI < Midori::API
 end
 ```
 
-路由也可以使用 query string：
+Routes may also utilize query string:
 
 ```ruby
 class ExampleAPI < Midori::API
@@ -81,11 +81,11 @@ class ExampleAPI < Midori::API
 end
 ```
 
-## WebSocket 和 EventSource
+## WebSocket & EventSource
 
-`WebSocket`  连接在 HTTP 协议中使用  `GET`  方法。但事实上，它与  `GET`  请求的行为完全不同。 在 midori 中，您可以轻松管理 WebSocket 连接，而无需关心协议的细节。
+`WebSocket` connection uses `GET` method in HTTP protocol, but indeed, it behaves totally different from `GET` requests. You don't need to care about the protocol details. In midori, you could easily manage websocket connections easily.
 
-下面是一个在 midori 中使用了 WebSocket 的聊天室示例：
+Here's a chatroom example using websocket in midori:
 
 ```ruby
 CONNECTION_POOL = []
@@ -111,9 +111,9 @@ class ExampleAPI < Midori::API
 end
 ```
 
-midori 还支持在路由中定义  `EventSource`。
+midori also supports `EventSource` connection as part of your route.
 
-下面是一个在 midori 中 使用 EventSource 的聊天室示例：
+Here's a chatroom example using eventsource in midori:
 
 ```ruby
 CONNECTION_POOL = []
