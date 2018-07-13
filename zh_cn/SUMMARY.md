@@ -23,7 +23,7 @@
 
 ## 元信息
 
-- [与其他框架比较](meta/comparison_with_other_frameworks.md)
+- [对比其他框架](meta/comparison_with_other_frameworks.md)
 - [下一步](meta/next_steps.md)
-- [加入 Midori 社区](meta/join_the_midori_community.md)
+- [加入 midori 社区](meta/join_the_midori_community.md)
 

@@ -22,7 +22,7 @@ class API < Midori::API
   end
 end
 
-Midori::Configure.port = 4567
+Midori::Configure.set :port, 4567
 Midori::Runner.new(API).start
 ```
 
@@ -38,7 +38,7 @@ class API < Midori::API
   end
 end
 
-Midori::Configure.bind = '0.0.0.0'
+Midori::Configure.set :bind, '0.0.0.0'
 Midori::Runner.new(API).start
 ```
 

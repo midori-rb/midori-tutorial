@@ -1,8 +1,8 @@
-# Request Handling
+# 请求处理
 
-## Accessing the request object
+## 访问请求对象
 
-The incoming request object can be accessed from request level (filter, routes, error handlers) through the `request` method:
+通过 `request` 方法，可以从不同的请求级别(filter、routes、error handlers)访问传入的请求对象：
 
 ```ruby
 class ExampleAPI < Midori::API
@@ -21,15 +21,15 @@ class ExampleAPI < Midori::API
 end
 ```
 
-**Note (for sinatra users): **The `request.body` in modori is a `String` object but not a `StringIO` object.
+**(sinatra 用户)注意:** midori 中的 `request.body` 是 `String` 对象，而不是 `StringIO` 对象。
 
-## Construct the response object
+## 构建响应对象
 
-Midori accepts the return value of the block as the response body by default.
+默认情况下， midori 接收 block 的返回值作为响应体。
 
-You could edit variable `status` and `header` to construct things other than body.
+你可以通过编辑 `status` 和 `header` 变量来构建响应体之外的其他部分。
 
-You could also return a `Midori::Response` object as your response, which could override everything.
+你也可以返回一个 `Midori::Response` 对象作为响应，这将会覆盖其它所有响应。
 
 ```ruby
 class ExampleAPI < Midori::API
