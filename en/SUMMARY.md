@@ -11,7 +11,6 @@
 * [Middlewares](essentials/middlewares.md)
 * [Extensions](essentials/extensions.md)
 
-
 ## Advanced
 
 - [Error Handling](advanced/error_handling.md)
@@ -26,4 +25,3 @@
 - [Comparison with Other Frameworks](meta/comparison_with_other_frameworks.md)
 - [Next Steps](meta/next_steps.md)
 - [Join the Midori Community](meta/join_the_midori_community.md)
-
