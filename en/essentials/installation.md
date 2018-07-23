@@ -6,45 +6,29 @@ Open up a command line prompt. Any commands prefaced with a dollar sign `$` sh
 
 ```
  $ ruby -v
- ruby 2.4.1p111
+ ruby 2.5.1p57
 ```
 
-Generally, midori supports the following ruby interpreters:
-
-- Ruby (MRI) **>= 2.2.6**
-
- For every version released, it would be tested and **officially ensured** in the following environments:
+Before every version of midori released, it would be tested and **officially ensured** in several ruby versions, which would be noticed in the release news post. In general, it would be tested in latest stable versions of all **still under maintainence**. For now, the latest midori supports the following ruby interpreters:
 
 - Ruby (MRI)
-  - 2.2.8
-  - 2.3.5
-  - 2.4.2
+  - 2.3.7
+  - 2.4.5
+  - 2.5.1
 
 **Note:**
 
 - **For JRuby users, due to some C extensions used in midori, it is still unable to run on the current version of JRuby.**
-- **For macOS users, you may meet performance problem due to the issue of [nio4r](https://github.com/socketry/nio4r/issues/125). Very few people would use macOS in production, so this issue may not affect much. We would still be working hard on fixing it, but the issue wouldn't be a high priority one.**
+- **For macOS users, you may meet performance problem due to the issue of [nio4r](https://github.com/socketry/nio4r/issues/125). As very few people would use macOS in production, this issue may not affect much. We would still be working hard on fixing it, but the issue wouldn't be a high priority one.**
 
 It's hard to say that if it is possible for running on other ruby implementations like Rubinius or RubyMotion, if you're in favor of supporting more ruby implementations, you could open a ticket [here](https://github.com/midori-rb/midori.rb/issues), and we are glad to discuss it.
 
 ## Install with RubyGems
 
 ```
-$ gem install em-midori
-Successfully installed em-midori-0.4.3
+$ gem install midori.rb
+Successfully installed midori.rb-0.8.0
 1 gem installed
-```
-
-To test whether it has installed properly, run:
-
-```
-$ ruby -r "midori" -e "class A < Midori::API;end;Midori::Runner.new(A).start"
-```
-
-If you see the following message, then everything now works fine.
-
-```
-Midori 0.4.3 is now running on 127.0.0.1:8080
 ```
 
 ## Use Bundler
@@ -54,7 +38,7 @@ Example `Gemfile` of basic usage as following:
 ```ruby
 source 'https://rubygems.org'
 gem 'bundler', '~> 1.0'
-gem 'em-midori', '~> 0.4', require: 'midori'
+gem 'midori.rb', '~> 0.8'
 ```
 
 and then running:
@@ -77,7 +61,7 @@ To include built-in extensions of midori you could make your `Gemfile` like:
 ```ruby
 source 'https://rubygems.org'
 gem 'bundler', '~> 1.0'
-gem 'em-midori', '~> 0.4', require: 'midori'
+gem 'midori.rb', '~> 0.8'
 gem 'midori-contrib', '~> 0.0.1', require: %w'midori-contrib/file midori-contrib/sequel/mysql2'
 ```
 
@@ -85,9 +69,8 @@ Using bunlder could make dependency management much easier, which helps a lot in
 
 ## For Developers in China
 
-You may probably meet problems with rubygems due to unstable overseas internet connection issues in China. The most popular way to solve it is to use mirror provided by [RubyChina](https://gems.ruby-china.org/) or [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) as your gem source. This may have some side effects in development, because there's a few minutes' delay in receiving gem updates.
+You may probably meet problems with rubygems due to unstable overseas internet connection issues in China. The most popular way to solve it is to use mirror provided by [RubyChina](https://gems.ruby-china.com/) or [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) as your gem source. This may have some side effects in development, because there's a few minutes' delay in receiving gem updates.
 
 Alternatively, you could use proxy to connect to the main repository directly to avoid the delay problem. But using proxy is a little too complex in production environment.
 
 Choose the solution better fits your requirements. Mixing the solutions like using proxy in development and using mirror in production is also a good choice.
-
