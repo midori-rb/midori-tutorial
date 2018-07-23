@@ -2,7 +2,7 @@
 
 ## 介绍
 
-`Runner` 是 midori 服务器的容器。你可以通过 `Runner` 创建、启动或终止 midori 示例。 
+`Runner` 是 midori 服务器的容器。你可以通过 `Runner` 创建、启动或终止 midori 实例。 
 
 `Runner` 使用 `Midori::Configure` 作为默认配置。
 
