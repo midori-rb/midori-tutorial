@@ -9,21 +9,16 @@
 
 ```
  $ ruby -v
- ruby 2.4.1p111
+ ruby 2.5.1p57
 ```
 
-通常 midori 支持下列 ruby 解释器：
-
-- Ruby (MRI) **>= 2.2.6**
-
-每一个发行的版本都会在下列环境中进行测试：
+每个版本的 midori 发布之前，会在几个 ruby 版本中进行测试，做到**官方保证其能正确运行**，你可以在更新说明中看到这些内容。一般来说，我们将在所有**仍然在维护的最新稳定版本中进行测试**。目前，最新的 midori 支持以下 ruby 解释器：
 
 - Ruby (MRI)
-  - 2.2.8
-  - 2.3.5
-  - 2.4.2
+  - 2.3.7
+  - 2.4.5
+  - 2.5.1
 
-**官方保证其能正确运行**
 
 **注意：**
 
@@ -36,7 +31,7 @@
 
 ```
 $ gem install em-midori
-Successfully installed em-midori-0.4.3
+Successfully installed midori.rb-0.8.0
 1 gem installed
 ```
 
@@ -59,7 +54,7 @@ Midori 0.4.3 is now running on 127.0.0.1:8080
 ```ruby
 source 'https://rubygems.org'
 gem 'bundler', '~> 1.0'
-gem 'em-midori', '~> 0.4', require: 'midori'
+gem 'midori.rb', '~> 0.8'
 ```
 
 之后运行:
@@ -80,7 +75,7 @@ Bundler.require
 ```ruby
 source 'https://rubygems.org'
 gem 'bundler', '~> 1.0'
-gem 'em-midori', '~> 0.4', require: 'midori'
+gem 'midori.rb', '~> 0.8'
 gem 'midori-contrib', '~> 0.0.1', require: %w'midori-contrib/file midori-contrib/sequel/mysql2'
 ```
 
@@ -90,7 +85,7 @@ gem 'midori-contrib', '~> 0.0.1', require: %w'midori-contrib/file midori-contrib
 
 由于中国大陆对外网络访问不稳定，你可能会遇到 rubygems 的相关问题。
 
-最常用的解决方法是使用 [RubyChina](https://gems.ruby-china.org/) 或 [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) 提供的镜像作为你的 gem 源。这样可能会对开发产生一些影响，因为在获取 gem 更新时会有数分钟的延迟。
+最常用的解决方法是使用 [RubyChina](https://gems.ruby-china.com/) 或 [TUNA](https://mirror.tuna.tsinghua.edu.cn/help/rubygems/) 提供的镜像作为你的 gem 源。这样可能会对开发产生一些影响，因为在获取 gem 更新时会有数分钟的延迟。
 
 另一种方式是通过代理服务器直接连接主仓库来避免延迟问题。 但在产品中使用代理服务器还是有一点过于复杂。
 
