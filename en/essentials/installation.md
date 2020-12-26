@@ -9,7 +9,7 @@ Open up a command line prompt. Any commands prefaced with a dollar sign `$` sh
  ruby 2.5.1p57
 ```
 
-Before every version of midori released, it would be tested and **officially ensured** in several ruby versions, which would be noticed in the release news post. In general, it would be tested in latest stable versions of all **still under maintainence**. For now, the latest midori supports the following ruby interpreters:
+Before every version of midori released, it would be tested and **officially ensured** in several ruby versions, which would be noticed in the release news post. In general, it would be tested in latest stable versions of all **still under maintenance**. For now, the latest midori supports the following ruby interpreters:
 
 - Ruby (MRI)
   - 2.3.7
